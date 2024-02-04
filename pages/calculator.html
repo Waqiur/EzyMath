@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon image.ico">
+    <link rel=" stylesheet" href="../assets/css/abstract/animation.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/pages/calculator.css" id="theme" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/abstract/media_queries.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- JS -->
+    <script defer src="../assets/js/script.js"></script>
+    <script defer src="../assets/js/calculator.js"></script>
+</head>
+
+<body>
+    <div class=" container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../index.html';">
+                    <p class="btn-text">Home</p>
+                    <span class="square"></span>
+                </button>
+        </header>
+        <div class="calculator-container radiant-container">
+            <div class="first-row">
+                <input type="text" name="result" id="result" placeholder="Result" />
+                <input type="button" value="C" onclick="result.value=''" id="clear-button" />
+            </div>
+
+            <div class="second-row">
+                <input type="button" value="1" onclick="liveScreen(1)" />
+                <input type="button" value="2" onclick="liveScreen(2)" />
+                <input type="button" value="3" onclick="liveScreen(3)" />
+                <input type="button" value="+" onclick="liveScreen('+')" />
+            </div>
+
+            <div class="third-row">
+                <input type="button" value="4" onclick=" liveScreen(4)" />
+                <input type="button" value="5" onclick=" liveScreen(5)" />
+                <input type="button" value="6" onclick=" liveScreen(6)" />
+                <input type="button" value="-" onclick="liveScreen('-')" />
+            </div>
+
+            <div class="fourth-row">
+                <input type="button" value="7" onclick="liveScreen(7)" />
+                <input type="button" value="8" onclick="liveScreen(8)" />
+                <input type="button" value="9" onclick=" liveScreen(9)" />
+                <input type="button" value="x" onclick="liveScreen('*')" />
+            </div>
+
+            <div class="fifth-row">
+                <input type="button" value="/" onclick="liveScreen('/')" />
+                <input type="button" value="0" onclick="liveScreen(0)" />
+                <input type="button" value="." onclick="liveScreen('.')" />
+                <input type="button" value="=" onclick="calculate(result.value)" />
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sets</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">Operations on Sets</h4>
+
+                <ol class="content">
+                    <li class="point">
+                        <p class="point-heading">Union</p>
+                        <p class="point-description">The union of two sets is a set containing all elements that are in
+                            A or in B (possibly both).</p>
+                        <p class="point-example">Example:- {1,2} &cup; {2,3} = {1,2,3}</p>
+                        <img class="point-img" src="../../assets/images/union.webp" alt="Union Image">
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Intersection</p>
+                        <p class="point-description">The intersection of two sets A and B, denoted by A&cap;B, consists
+                            of all elements that are both in A and B.</p>
+                        <p class="point-example">Example:- {1,2} &cap; {2,3} = {2}</p>
+                        <img class="point-img" src="../../assets/images/intersection.webp" alt="Intersection Image">
+                        <p class="point-note">The intersection of A and B is the middle part</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Disjoint</p>
+                        <p class="point-description">Set A and set B are called disjoint sets if no element is common to
+                            A and B. i.e. A and B are disjoint sets then (A &cap; B = ∅)</p>
+                        <p class="point-example">Example:- A = {1,3,5}, B = {2,4,6} and C = {a,b,c}<br> A &cap; B &cap;
+                            C = ∅</p>
+                        <img class="point-img" src="../../assets/images/disjoint.webp" alt="Disjoint Image">
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Complement</p>
+                        <p class="point-description">The complement of a set A, denoted by A<sup>c</sup>, is elements in
+                            Universal Set which are not in A</p>
+                        <img class="point-img" src="../../assets/images/complement.webp" alt="Complement Image">
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Difference</p>
+                        <p class="point-description">The set A &minus; B consists of elements that are in A but not in
+                            B.</p>
+                        <p class="point-example">Example:- A = {1,2,3} and B = {3,5} <br> then, A - B = {1,2}</p>
+                        <img class="point-img" src="../../assets/images/difference.webp" alt="Difference Image">
+                    </li>
+                </ol>
+
+
+                <h4 class="heading">Some conclusions from set operations</h4>
+                <ol class="content">
+                    <p style="margin-left: -25px;" class="subheading">Let S be the universal set, and A,B,C,D are
+                        subsets of S. Then</p>
+
+                    <li class="point">
+                        <p class="point-heading">A ∪ ∅ = A</p>
+                        <p class="point-description">Hence ∅ i.e. empty set is identity set for 'union operation'.</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A &cap; S = A</p>
+                        <p class="point-description">S i.e. universal set is identity set for 'intersection operation'.
+                        </p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A &cup; S = S</p>
+                        <p class="point-description">A ⊂ S and A &cup; S = S
+                            <span>if B ⊂ A then A &cup; B = A i.e. union of super set and subset is super set.</span>
+                        </p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A &cap; ∅ = ∅</p>
+                        <p class="point-description">∅ ⊂ A and A &cap; ∅ = ∅
+                            <span>if B ⊂ A then A &cap; B = B i.e. intersection of super set and subset is
+                                subset.</span>
+                        </p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">If B ⊂ A, then A &cap; B = B and A &cup; B = A</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A ⊂ A &cup; B also B ⊂ A &cup; B</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A &cap; B ⊂ A also A &cap; B ⊂ B</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A &cap; B ⊂ A ⊂ A &cup; B and A &cap; B ⊂ B ⊂ A &cup; B</p>
+                        <p class="point-description">
+                            A and B
+                            sets. A &cap; B is the smallest set and A &cup; B is the largest set.
+                            A contains A &cap; B and A is contained in A &cup; B.
+                            Similarly B contains A &cap; B and B is contained in A &cup; B.
+                        </p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">As A &cap; B ⊂ A</p>
+                        <p class="point-description">(A &cap; B) &cup; A = A [super set]
+                            <span>(A &cap; B) &cap; A = (A &cap; B) [subset]</span>
+                        </p>
+                        </p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">As A ⊂ A &cup; B</p>
+                        <p class="point-description">A &cap; (A &cup; B) = A [subset]
+                            <span>A &cup; (A &cup; B) = (A &cup; B) [super set]</span>
+                        </p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">(A - B) &cup; (A &cap; B) &cup; (B - A) = A &cup; B and (A - B), (A
+                            &cap; B), (B - A) are pairwise disjoint.
+                        </p>
+                        <p class="point-description">i.e.
+                            <span>(A - B) &cap; (A &cap; B) = ∅ </span>
+                            <span>(A - B) &cap; (B - A) = ∅ </span>
+                            <span>(A &cap; B) &cap; (B - A) = ∅ </span>
+                            <span>Hence (A - B), (A &cap; B), and (B - A) are partitions of A &cup; B.</span>
+                        </p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A &cup; A' = S</p>
+                        <p class="point-description">Union of A and its complement gives identity set for intersection
+                            operation.</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">A &cap; A' = ∅</p>
+                        <p class="point-description">Intersection of A and its complement gives identity set for union operation.</p>
+                    </li>
+                </ol>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

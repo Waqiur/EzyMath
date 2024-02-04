@@ -1,0 +1,283 @@
+@font-face {
+    font-family: KaTeX_Math;
+    src: url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"), url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"), url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 78px);
+}
+
+.heading {
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+}
+
+.subheading {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* TAB */
+
+.tab-wrap {
+    transition: 0.3s box-shadow ease;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    list-style: none;
+}
+
+.tab {
+    display: none;
+}
+
+.tab:checked:nth-of-type(1)~.tab__content:nth-of-type(1) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+
+.tab:checked:nth-of-type(2)~.tab__content:nth-of-type(2) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+
+.tab:checked:nth-of-type(3)~.tab__content:nth-of-type(3) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+
+.tab:checked+label {
+    background-color: transparent;
+    cursor: default;
+}
+
+.tab+label {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    flex-grow: 3;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.tab:not(:checked)+label:hover {
+    background-color: #fff;
+}
+
+.tab__content {
+    padding: 25px 25px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    min-height: calc(100vh - 128px);
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    transform: translateY(-3px);
+}
+
+/* TABLE */
+
+table {
+    display: table;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table {
+    margin-bottom: 2rem;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: black;
+    margin-bottom: 4px;
+}
+
+th {
+    background-image: linear-gradient(to right bottom, rgba(0, 98, 255, 0.3), rgb(195, 248, 255, 0.3));
+    font-size: 18px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 98, 255, 0.1);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(195, 248, 255, 0.1);
+}
+
+td,
+th {
+    display: table-cell;
+    max-width: 0px;
+    text-align: center;
+    border: 1px solid;
+    padding: 10px 0;
+}
+
+.tautology-table {
+    display: table;
+}
+
+.tautology-table th:nth-child(5),
+th:nth-child(6) {
+    width: 25%;
+}
+
+.overline {
+    text-decoration-line: overline;
+}
+
+/* LIST */
+
+.content {
+    width: 60%;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.point {
+    list-style-type: decimal;
+}
+
+.point:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.point-heading {
+    font-weight: 600;
+}
+
+.point-description,
+.point-example,
+.point-note {
+    font-size: 18px;
+}
+
+.point-example {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.point-img {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.point-note {
+    margin-top: 6px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* CALCULATOR */
+
+.calc-container {
+    font-size: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.math-letter {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 700;
+    display: inline;
+    text-transform: lowercase;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+::placeholder {
+    color: #aaa;
+    background-color: #fff;
+}
+
+.form-input {
+    width: 25%;
+    border-radius: 30px;
+    padding: 15px;
+    border: 1px solid #000;
+}
+
+.wide-input {
+    width: 45%;
+}
+
+.calc-btn {
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 40px;
+}
+
+.calc-btn:active {
+    opacity: 0.8;
+}
+
+.calc-btn-light {
+    background-color: hsl(15, 100%, 55%);
+}
+
+.calc-btn-dark {
+    background-color: hsl(229, 84%, 12%);
+}
+
+.solution {
+    font-family: Katex_Math !important;
+    font-size: 19.36px !important;
+}
+
+.solution span {
+    font-size: 19.36px !important;
+}

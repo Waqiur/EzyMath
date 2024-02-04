@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Relations</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        .point-note {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">Types of Relations</h4>
+
+                <ol class="content">
+                    <li class="point">
+                        <p class="point-heading">Empty Relation</p>
+                        <p class="point-description">An empty relation (or void relation) is one in which
+                            there is no relation between any elements of a set.
+                        </p>
+                        <p class="point-note">R = φ ⊂ A × A</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Universal Relation</p>
+                        <p class="point-description">A universal (or full relation) is a type of relation in which every
+                            element of a set is related to each other.</p>
+                        <p class="point-note">R = A &times; A</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Identity Relation</p>
+                        <p class="point-description">In an identity relation, every element of a set is related to
+                            itself only.</p>
+                        <p class="point-note">I = {(a, a) : a ∈ A}</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Inverse Relation</p>
+                        <p class="point-description">Inverse relation is seen when a set has elements which are inverse
+                            pairs of another set.</p>
+                        <p class="point-note">R<sup>-1</sup> = {(b, a) : (a, b) ∈ R}</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Reflexive Relation</p>
+                        <p class="point-description">In a reflexive relation, every element maps to itself.</p>
+                        <p class="point-note">(a, a) ∈ R</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Symmetric Relation</p>
+                        <p class="point-description">In a symmetric relation, if a = b is true then b = a is also true.
+                        </p>
+                        <p class="point-note">aRb ⇒ bRa, ∀ a, b ∈ A</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Transitive Relation</p>
+                        <p class="point-description">For transitive relation, if (x, y) ∈ R, (y, z) ∈ R, then (x, z) ∈
+                            R.</p>
+                        <p class="point-note">aRb and bRc ⇒ aRc, ∀ a, b, c ∈ A</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-heading">Equivalence Relation</p>
+                        <p class="point-description">If a relation is reflexive, symmetric, and transitive at the same
+                            time it is known as an equivalence relation.</p>
+                    </li>
+
+                </ol>
+
+                <h4 class="heading">Representation of Types of Relations</h4>
+                <table class="table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th>Relation Type
+                            </th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Empty Relation</td>
+                            <td>R = φ ⊂ A × A</td>
+                        </tr>
+                        <tr>
+                            <td>Universal Relation
+                            </td>
+                            <td>R = A × A</td>
+                        </tr>
+                        <tr>
+                            <td>Identity Relation</td>
+                            <td>I = {(a, a), a ∈ A}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Inverse Relation</td>
+                            <td>R<sup>-1</sup> = {(b,
+                                a): (a, b)
+                                ∈ R}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Reflexive Relation
+                            </td>
+                            <td>(a, a) ∈ R</td>
+                        </tr>
+                        <tr>
+                            <td>Symmetric Relation
+                            </td>
+                            <td>aRb ⇒ bRa, ∀ a, b ∈ A
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Transitive Relation
+                            </td>
+                            <td>aRb and bRc ⇒ aRc ∀ a,
+                                b, c ∈ A
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
