@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ellipse</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- KATEX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+        integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+        integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">hyperarabola</h4>
+
+                <table>
+                    <caption>Equation of Hyperbola</caption>
+                    <thead>
+                        <tr>
+                            <th>Equation</th>
+                            <th>Graph</th>
+                            <th>Focus</th>
+                            <th>Length of LR</th>
+                            <th>Directrix</th>
+                            <th>Length of Transverse Axis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[\frac{x^2}{a^2}\space-\frac{y^2}{b^2}\space=1\]</th>
+                            <td><img src="../../assets/images/Hyperbola1.webp" class="img-fluid"></td>
+                            <td>\[(±ae,0)\]</td>
+                            <td>\[\frac{2b^2}{a}\]</td>
+                            <td>\[x=±\frac{a}{e}\]</td>
+                            <td>\[2a\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[\frac{y^2}{b^2}\space-\frac{x^2}{a^2}\space=1\]</th>
+                            <td><img src="../../assets/images/Hyperbola2.webp" class="img-fluid"></td>
+                            <td>\[(0,±be)\]</td>
+                            <td>\[\frac{2a^2}{b}\]</td>
+                            <td>\[y=±\frac{b}{e}\]</td>
+                            <td>\[2b\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[{x^2}\space-{y^2}\space={a^2}\]</th>
+                            <td><img src="../../assets/images/Hyperbola3.webp" class="img-fluid"></td>
+                            <td>\[(0, ±a{\sqrt{2}} )\]</td>
+                            <td>\[2a\]</td>
+                            <td>\[x=±\frac{a}{\sqrt{2}}\]</td>
+                            <td>\[2a\]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Equations of Tangent of Hyperbola</h2>
+                <table>
+                    <caption>Equation of Tangent of Hyperbola</caption>
+                    <thead>
+                        <tr>
+                            <th>Equation</th>
+                            <th>Parametric Coordinates</th>
+                            <th>Equation of Tangent</th>
+                            <th>Condition of Tangency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[\frac{x^2}{a^2}\space-\frac{y^2}{b^2}\space=1\]</th>
+                            <td>\[(asec\theta,btan\theta)\]</td>
+                            <td>\[y=mx±\sqrt{am^2-b^2}\]</td>
+                            <td>\[c=±\sqrt{am^2-b^2}\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[\frac{y^2}{b^2}\space-\frac{x^2}{a^2}\space=1\]</th>
+                            <td>\[(bsec\theta,atan\theta)\]</td>
+                            <td>\[y=mx±\sqrt{-bm^2+a^2}\]</td>
+                            <td>\[c=±\sqrt{-bm^2+a^2}\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[{x^2}\space-{y^2}\space={a^2}\]</th>
+                            <td>\[(asec\theta,atan\theta)\]</td>
+                            <td>\[y=mx±\sqrt{am^2-a^2}\]</td>
+                            <td>\[c=±\sqrt{am^2-a^2}\]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Equations of Normal of Hyperbola</h2>
+                <table>
+                    <caption>Equation of Normal of Hyperbola</caption>
+                    <thead>
+                        <tr>
+                            <th>Equation</th>
+                            <th>Parametric Coordinates</th>
+                            <th>Equation of Normal</th>
+                            <th>Condition of Normality</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[\frac{x^2}{a^2}\space-\frac{y^2}{b^2}\space=1\]</th>
+                            <td>\[(asec\theta,btan\theta)\]</td>
+                            <td>\[\frac{ax}{sec\theta}+\frac{by}{tan\theta}=a^2+b^2\]</td>
+                            <td>\[c=\frac{m(a^2+b^2)}{\sqrt{a^2-b^2m^2}}\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[\frac{y^2}{b^2}\space-\frac{x^2}{a^2}\space=1\]</th>
+                            <td>\[(bsec\theta,atan\theta)\]</td>
+                            <td>\[\frac{bx}{sec\theta}+\frac{ay}{tan\theta}=b^2+a^2\]</td>
+                            <td>\[c=\frac{m(b^2-a^2)}{\sqrt{a^2m^2-b^2}}\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[{x^2}\space-{y^2}\space={a^2}\]</th>
+                            <td>\[(asec\theta,atan\theta)\]</td>
+                            <td>\[\frac{x}{sec\theta}+\frac{y}{tan\theta}=2a\]</td>
+                            <td>\[c=\frac{2am}{\sqrt{1-m^2}}\]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Equations of Director Circle of Hyperbola</h2>
+                <table>
+                    <caption>Equation of Director Circle of Hyperbola</caption>
+                    <thead>
+                        <tr>
+                            <th>Equation</th>
+                            <th>Equation of Director Circle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[\frac{x^2}{a^2}\space-\frac{y^2}{b^2}\space=1\]</th>
+                            <td>\[x^2\,+\,y^2\space\,=a^2\,-\,b^2\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[\frac{y^2}{b^2}\space-\frac{x^2}{a^2}\space=1\]</th>
+                            <td>\[x^2\,+\,y^2\space\,=b^2\,-\,a^2\]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parabola</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- KATEX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+        integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+        integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">Parabola</h4>
+
+                <table>
+                    <caption>Equation of Parabola</caption>
+                    <thead>
+                        <tr>
+                            <th>Equation</th>
+                            <th>Graph</th>
+                            <th>Focus</th>
+                            <th>Length of LR</th>
+                            <th>Equation of Directrix</th>
+                            <th>Equation of Axis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[y^2=4ax\]</th>
+                            <td><img src="../../assets/images/Parabola1.webp" class="img-fluid"></td>
+                            <td>\[(a,0)\]</td>
+                            <td>\[4a\]</td>
+                            <td>\[x=-a\]</td>
+                            <td>\[y=0\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[y^2=-4ax\]</th>
+                            <td><img src="../../assets/images/Parabola2.webp" class="img-fluid"></td>
+                            <td>\[(-a,0)\]</td>
+                            <td>\[4a\]</td>
+                            <td>\[x=a\]</td>
+                            <td>\[y=0\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[x^2=4ay\]</th>
+                            <td><img src="../../assets/images/Parabola3.webp" class="img-fluid"></td>
+                            <td>\[(0,a)\]</td>
+                            <td>\[4a\]</td>
+                            <td>\[y=-a\]</td>
+                            <td>\[x=0\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[x^2=-4ay\]</th>
+                            <td><img src="../../assets/images/Parabola4.webp" class="img-fluid"></td>
+                            <td>\[(0,-a)\]</td>
+                            <td>\[4a\]</td>
+                            <td>\[y=a\]</td>
+                            <td>\[x=0\]</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+                <table>
+                    <caption>Equation of Tangent of Parabola in slope form</caption>
+                    <thead>
+                        <tr>
+                            <th>Equations of Parabola</th>
+                            <th>Point of contact in terms of slope (m)</th>
+                            <th>Equation of tangent in terms of slope (m)</th>
+                            <th>Condition of Tangency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[y^2=4ax\]</th>
+                            <td>\[(\frac{a}{m^2},\frac{2a}{m})\]</td>
+                            <td>\[y=mx+\frac{a}{m}\]</td>
+                            <td>\[c=\frac{a}{m}\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[y^2=-4ax\]</th>
+                            <td>\[(-\frac{a}{m^2},-\frac{2a}{m})\]</td>
+                            <td>\[y=mx-\frac{a}{m}\]</td>
+                            <td>\[c=-\frac{a}{m}\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[x^2=4ay\]</th>
+                            <td>\[(2am,am^2)\]</td>
+                            <td>\[y=mx-am^2\]</td>
+                            <td>\[c=-am^2\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[x^2=-4ay\]</th>
+                            <td>\[(-2am,am^2)\]</td>
+                            <td>\[y=mx+am^2\]</td>
+                            <td>\[c=am^2\]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <table>
+                    <caption>Equation of Normal of Parabola in slope form</caption>
+                    <thead>
+                        <tr>
+                            <th>Equations of Parabola</th>
+                            <th>Point of contact in terms of slope (m)</th>
+                            <th>Equation of normal in terms of slope (m)</th>
+                            <th>Condition of Normality</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[y^2=4ax\]</th>
+                            <td>\[(am^2,-2am)\]</td>
+                            <td>\[y=mx-2am-am^3\]</td>
+                            <td>\[c=-2am-am^3\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[y^2=-4ax\]</th>
+                            <td>\[(am^2,2am)\]</td>
+                            <td>\[y=mx+2am+am^3\]</td>
+                            <td>\[c=2am+am^3\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[x^2=4ay\]</th>
+                            <td>\[(-\frac{2a}{m},\frac{a}{m^2})\]</td>
+                            <td>\[y=mx+2a+\frac{a}{m^2}\]</td>
+                            <td>\[c=2a+\frac{a}{m^2}\]</td>
+                        </tr>
+                        <tr>
+                            <th>\[x^2=-4ay\]</th>
+                            <td>\[(\frac{2a}{m},-\frac{a}{m^2})\]</td>
+                            <td>\[y=mx-2a-\frac{a}{m^2}\]</td>
+                            <td>\[c=-2a-\frac{a}{m^2}\]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <table>
+                    <caption>Director Circle of Parabola</caption>
+                    <thead>
+                        <tr>
+                            <th>Equations of Parabola</th>
+                            <th>Equation of Director Circle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>\[y^2=4ax\]</th>
+                            <td>\[x\,+a\space=\,0\]</td>
+
+                        </tr>
+                        <tr>
+                            <th>\[y^2=-4ax\]</th>
+                            <td>\[x\,-a\space=\,0\]</td>
+
+                        </tr>
+                        <tr>
+                            <th>\[x^2=4ay\]</th>
+                            <td>\[y\,+a\space=\,0\]</td>
+
+                        </tr>
+                        <tr>
+                            <th>\[x^2=-4ay\]</th>
+                            <td>\[y\,-a\space=\,0\]</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

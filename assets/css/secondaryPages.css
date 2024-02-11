@@ -19,10 +19,14 @@
 }
 
 .subheading {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
     text-align: left;
     margin-bottom: 10px;
+}
+
+.subheading:not(:last-child) {
+    margin-top: 20px;
 }
 
 /* TAB */
@@ -152,12 +156,16 @@ th {
     padding: 10px 0;
 }
 
+td img {
+    width: 100%;
+}
+
 .tautology-table {
     display: table;
 }
 
 .tautology-table th:nth-child(5),
-th:nth-child(6) {
+.tautology-table th:nth-child(6) {
     width: 25%;
 }
 
@@ -171,6 +179,10 @@ th:nth-child(6) {
     width: 60%;
     margin-bottom: 40px;
     font-size: 22px;
+}
+
+.content p {
+    font-size: 18px;
 }
 
 .point {
