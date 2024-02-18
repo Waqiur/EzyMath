@@ -1,9 +1,13 @@
 
 function resetCalculator() {
-    var output = document.getElementById("solution");
-    var form = document.getElementById("form");
-    form.reset();
-    output.innerHTML = "";
+    var output = document.querySelectorAll(".solution");
+    var form = document.querySelectorAll(".form");
+    form.forEach(element => {
+        element.reset();
+    })
+    output.forEach(element => {
+        element.innerHTML = "";
+    });
 }
 
 // SOLVE FOR X
@@ -35,6 +39,8 @@ function solveForX() {
         renderMathInElement(output);
     }
 }
+
+
 
 // FRACTIONS
 function solveFraction(num1, num2) {
@@ -84,6 +90,7 @@ function solveFraction(num1, num2) {
     }
     return { 'result': result, 'steps': temp };
 }
+
 function callSolveFraction() {
     var num1 = document.getElementById('num1solvefraction').value;
     var num2 = document.getElementById('num2solvefraction').value;
@@ -92,12 +99,115 @@ function callSolveFraction() {
 
     if (num2 == 0) {
         document.getElementById('solution').innerHTML = "Invalid Operation , Denominator can't be zero of a Fraction";
-        // document.getElementById('outputresult').innerHTML = " ";
     }
     else {
         document.getElementById('solution').innerHTML = data['steps'];
-        // document.getElementById('outputresult').innerHTML = data['result'];
     }
     renderMathInElement(document.getElementById('solution'));
-    // renderMathInElement(document.getElementById('outputresult'));
+}
+
+
+// Quadratic equation whose roots are K times the roots of given equation
+function ktimes() {
+    let A = parseInt(document.getElementById('aofeqn').value)
+    let B = parseInt(document.getElementById('bofeqn').value)
+    let C = parseInt(document.getElementById('cofeqn').value)
+    let K = parseInt(document.getElementById('kofeqn').value)
+    var res = document.getElementById("solutionKtimes");
+    if (isNaN(A) || isNaN(B) || isNaN(C) || isNaN(K)) {
+        res.innerHTML = "Please enter all the values";
+    } else {
+        res.innerHTML += "Coefficient of x<sup>2</sup>: " + A + "<br>";
+        res.innerHTML += "Coefficient of x: " + B + "<br>";
+        res.innerHTML += "Constant term: " + C + "<br>";
+        res.innerHTML += "Number of times the equation is to be multiplied: " + K + "<br>";
+        res.innerHTML += "The Quadratic equation whose roots are K times the roots of given equation: " + A + " " + K * B
+            + " " + K * K * C
+    }
+}
+
+//Quadratic equation whose roots are reciprocal to the roots of given equation
+function reciprocal() {
+    let A = parseInt(document.getElementById("aofeqn1").value)
+    let B = parseInt(document.getElementById("bofeqn1").value)
+    let C = parseInt(document.getElementById("cofeqn1").value)
+    var output = document.getElementById("solutionReciprocal")
+    var ans = "";
+    if (!isNaN(A) && !isNaN(B) && !isNaN(C)) {
+        ans += "\\[For \\space the \\space Quadratic \\space Equation \\space ax^{2}+bx+c \\space = \\space 0 \\space consider \\space the \\space roots \\space are \\space given \\space p,q \\]"
+        ans += "\\[Sum \\space and \\space Product \\space of \\space roots \\space is \\space given \\space by, \\] "
+        ans += "\\[p \\space + \\space q \\space = \\space \\frac{-b}{a} and \\space p \\space \\times \\space q \\space = \\space \\frac{c}{a} \\]"
+        ans += "\\[The \\space reciprocal \\space of \\space the \\space roots \\space are \\space \\frac{1}{p} \\space , \\space \\frac{1}{q}  \\]"
+        ans += "\\[\\frac{1}{p} \\space + \\space \\frac{1}{q} \\space = \\space \\frac{-b}{c} and \\space \\frac{1}{p} \\space \\times \\space \\frac{1}{q} \\space = \\space \\frac{a}{c} \\]"
+        ans += "\\[Solving \\space roots \\space the \\space Quadratic \\space Equation \\space becomes \\space cx^{2}+bx+a \\space = 0 \\]"
+        ans += "\\[The \\space Quadratic \\space Equation \\space with \\space these \\space reciprocal \\space roots \\space is \\space (" + C + ")  x^2 + (" + B + ") x + (" + A + ") = 0 \\]"
+    }
+    else {
+        ans += "\\[Please \\space enter \\space all \\space the \\space values\\]";
+    }
+    output.innerHTML = ans;
+    renderMathInElement(output);
+}
+
+
+//Quadratic Equation having given sum and product of roots
+function sumProduct() {
+    var S = parseInt(document.getElementById("sumOfRoots").value)
+    var P = parseInt(document.getElementById("productOfRoots").value)
+    var output = document.getElementById("solutionSumProduct")
+    var ans = "";
+    if (!isNaN(S) && !isNaN(P)) {
+        ans += "\\[For \\space the \\space Quadratic \\space Equation \\space ax^{2}+bx+c \\space = \\space 0 \\space the \\space roots \\space are \\space given \\space by, \\]"
+        ans += "\\[x \\space = \\space \\frac{-b ± \\sqrt{b^{2} - 4ac}}{2a} \\]"
+        ans += "\\[Sum \\space and \\space Product \\space of \\space roots \\space is \\space given \\space by, \\] "
+        ans += "\\[S \\space = \\space \\frac{-b}{a} and \\space P \\space = \\space \\frac{c}{a} \\]"
+        ans += "\\[The \\space  Equation \\space is \\space given \\space by: \\space x^{2} + (-1) \\times S + P = 0 \\]"
+        ans += "\\[The \\space equation \\space is \\space  x^2" + (-S) + " x + " + P + " \\space = \\space 0 \\]"
+    } else {
+        ans += "\\[Please \\space enter \\space all \\space the \\space values\\]";
+    }
+    output.innerHTML = ans;
+    renderMathInElement(output);
+}
+
+
+//Maximum and Minimum value of a quadratic function
+function maxMin() {
+    var a = parseInt(document.getElementById("aofeqn2").value)
+    var b = parseInt(document.getElementById("bofeqn2").value)
+    var c = parseInt(document.getElementById("cofeqn2").value)
+    if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+        var secondPart = parseInt(c) * 1.0 - (parseInt(b) ** 2 / (4.0 * parseInt(a)));
+        if (a > 0) {
+            document.getElementById("maxminquadans1").innerHTML = "\\[Since \\space the \\space coefficeient \\space of \\space x^2 \\space > \\space 0 \\newline Maxvalue \\space  = \\space Infinity \\]";
+            document.getElementById("maxminquadans2").innerHTML = "\\[Minvalue \\space = \\space constant \\times 1 \\space - \\space \\frac{(coefficeient \\space of \\space x)^2}{4 \\times (coefficeient \\space of \\space x^2)} \\space = \\space" + c + " \\times 1 \\space - \\space (\\frac{" + b + "^2}{4 \\times " + a + "}) \\space = \\space " + secondPart.toFixed(3) + "\\]";
+        } else if (a < 0) {
+            document.getElementById("maxminquadans1").innerHTML = "\\[Maxvalue \\space =  \\space constant \\times 1 \\space - \\space \\frac{(coefficeient \\space of \\space x)^2}{4 \\times (coefficeient \\space of \\space x^2)} \\space = \\space " + c + " \\times 1 \\space - \\space (\\frac{" + b + "^2}{4 \\times " + a + "}) \\space = \\space " + secondPart.toFixed(3) + "\\]";
+            document.getElementById("maxminquadans2").innerHTML = "\\[Since \\space the \\space coefficeient \\space of \\space x^2 \\space < \\space 0 \\newline Minvalue \\space  = \\space Infinity \\]";
+        }
+        renderMathInElement(document.getElementById("maxminquadans1"));
+        renderMathInElement(document.getElementById("maxminquadans2"));
+    } else {
+        document.getElementById("maxminquadans1").innerHTML = "\\[Please \\space enter \\space all \\space the \\space values\\]";
+        document.getElementById("maxminquadans2").innerHTML = "";
+        renderMathInElement(document.getElementById("maxminquadans1"));
+    }
+}
+
+
+//Check whether one root of the Quadratic Equation is twice of other or not
+function twice() {
+    var a = parseInt(document.getElementById("aofeqn3").value)
+    var b = parseInt(document.getElementById("bofeqn3").value)
+    var c = parseInt(document.getElementById("cofeqn3").value)
+    if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+        if (2 * b * b == 9 * a * c) {
+            document.getElementById("solutionTwice").innerHTML = "\\[Since \\space here, \\space (2 \\times b \\times b) \\space exactly \\space equals \\space to \\space (9 \\times a \\times c) \\space that \\space  is, \\newline " + (2 * b * b) + " \\space = \\space " + (9 * a * c) + " \\newline Hence, \\space one \\space root \\space  of \\space the \\space Quadratic \\space Equation \\space is \\space twice\\]";
+        } else {
+            document.getElementById("solutionTwice").innerHTML = "\\[Since \\space here, \\space (2 \\times b \\times b) \\space NOT \\space equals \\space to \\space (9 \\times a \\times c) \\space that \\space  is, \\newline " + (2 * b * b) + " \\space \\neq \\space " + (9 * a * c) + " \\newline Hence, \\space one \\space root \\space  of \\space the \\space Quadratic \\space Equation \\space is \\space NOT \\space twice\\]";
+        }
+    } else {
+        document.getElementById("solutionTwice").innerHTML = "\\[Please \\space enter \\space all \\space the \\space values\\]";
+    }
+    renderMathInElement(document.getElementById("solutionTwice"));
 }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Root of Equation</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- KATEX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+        integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+        integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">Root of Equation</h4>
+
+                <p class="main-para">Nature of the roots of the Quadratic Equation ax<sup>2</sup> + bx + c, a ≠ 0, a, b, c ∈ R
+                    <br>To find out the nature of the roots of a quadratic equation, we find the value of the
+                    discriminant D \[D=b^2-4ac\]
+                </p>
+
+                <ol class="content">
+                    <li class="point">
+                        <p class="point-description">If D < 0, we immediately say that equation has no solution in
+                                R.</p>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-description">If D > 0, then we examine whether it is a perfect
+                            square of a rational number or not.</p>
+                        <ol type="i">
+                            <li class="inner-point">
+                                <p class="point-description">
+                                    If D > 0 and D is not a perfect square, then
+                                    roots are real and distinct.
+                                </p>
+                            </li>
+                            <li class="inner-point">
+                                <p class="point-description">
+                                    If D > 0 and it is a perfect square of a
+                                    rational number and a, b, c ∈ Q,
+                                    then the roots are real and rational. Roots are also distinct.
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="point">
+                        <p class="point-description">If D = 0 then the roots are real and equal and if a,
+                            b, c ∈ Q the roots are equal rational numbers.</p>
+                    </li>
+                </ol>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
