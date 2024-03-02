@@ -59,6 +59,16 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+/* KATEX CSS */
+.katex-display {
+  margin: 0px !important;
+  font-size: 15px !important;
+}
+
+.solution .katex-display {
+  margin: 20px !important;
+}
+
 /*-----------------------------------*\
   #COMPONENT
 \*-----------------------------------*/
@@ -119,6 +129,10 @@ input::-webkit-inner-spin-button {
 
 .margin-top {
   margin-top: 10px;
+}
+
+.margin-top-large {
+  margin-top: 30px;
 }
 
 .section-subtitle {

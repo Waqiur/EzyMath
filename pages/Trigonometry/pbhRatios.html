@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fractions</title>
+    <title>PBH Ratio</title>
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
 
     <!-- CSS -->
@@ -45,24 +45,25 @@
         </header>
         <main>
             <div class="main-container radiant-container">
-                <h4 class="heading">Fractions</h4>
-     
+                <h4 class="heading">PBH Ratios</h4>
+
+                <h4 class="secondary-heading">Put atleast two values</h4>
+
                 <form class="form" action="" id="form" autocomplete="off">
                     <div class="calc-container">
                         <div class="input-container">
-                            <input type="number" id="num1solvefraction" class="form-input wide-input" placeholder="Numerator">
-                            <input type="number" id="num2solvefraction" class="form-input wide-input" placeholder="Denominator">
+                            <input class="form-input" id="perpendicular" type="number" placeholder="perpendicular">
+                            <input class="form-input" id="base" type="number" placeholder="base">
+                            <input class="form-input" id="hypotenuse" type="number" placeholder="hypotenuse">
                         </div>
                         <div class="button-container">
-                            <button type="button" class="calc-btn calc-btn-light" onclick="callSolveFraction()">Solve</button>
-                            <button type="button" class="calc-btn calc-btn-dark"
-                                onclick="resetCalculator()">Reset</button>
+                            <button type="button" class="calc-btn calc-btn-light" onclick="pbhRatios()">Solve</button>
+                            <button type="button" class="calc-btn calc-btn-dark" onclick="resetCalculator()">Reset</button>
                         </div>
                     </div>
                 </form>
                 <p>&nbsp;</p>
-                <div class="solution" id="solution">
-                </div>
+                <div class="solution" id="solution"></div>
             </div>
         </main>
     </div>

@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Linear Algebra</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <title>Trigonmetry</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
     <link rel="stylesheet" href="../assets/css/abstract/media_queries.css"">
     <link rel=" stylesheet" href="../assets/css/abstract/animation.css">
 
@@ -23,62 +24,106 @@
 </head>
 
 <body>
-    <main>
-        <section class="course" id="course">
-            <div class="course-grid">
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/Trignometry Basics.webp" alt="course banner">
-                    </div>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
 
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="Trigonometrybasic.html">Trigonometry Basics</a>
-                        </h3>
+                <button class="btn btn-primary" onclick="location.href = 'calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square"></span>
+                </button>
+            </nav>
+        </header>
+
+        <!--  MAIN CONTENTS -->
+        <main>
+            <div class="tab-wrap radiant-container">
+                <!-- active tab on page load gets checked attribute -->
+                <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+                <label for="tab1">Study</label>
+
+                <input type="radio" id="tab2" name="tabGroup1" class="tab">
+                <label for="tab2">Practice</label>
+
+                <input type="radio" id="tab3" name="tabGroup1" class="tab">
+                <label for="tab3">Calculator</label>
+
+                <div class="tab__content">
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-banner">
+                                <img src="../assets/images/Trignometry Basics.webp" alt="course banner">
+                            </div>
+
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="../pages/Trigonometry/trigonometryBasic.html">Trigonometry Basics</a>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="course-card">
+                            <div class="course-banner">
+                                <img src="../assets/images/Trigonmetry Values.webp" alt="course banner">
+                            </div>
+
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="../pages/Trigonometry/trigonometryValues.html">Trigonometry Values</a>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="course-card">
+                            <div class="course-banner">
+                                <img src="../assets/images/Inverse Trignometric Identities.webp" alt="course banner">
+                            </div>
+
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="../pages/Trigonometry/inverseTrigonometricIdentities.html">Inverse Trigonometric Identities</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab__content">
+                    <h3>Medium Section</h3>
+                    <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget,
+                        lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo,
+                        fringilla
+                        vel, aliquet nec, vulputate eget, arcu.</p>
+
+                    <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit.
+                        Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus
+                        blandit viverra.</p>
+                </div>
+
+                <div class="tab__content">
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-banner">
+                                <img src="../assets/images/PBH Trigo.webp" alt="course banner">
+                            </div>
+    
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="../pages/Trigonometry/pbhRatios.html">P/B/H Trigo</a>
+                                </h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/PBH Trigo.webp" alt="course banner">
-                    </div>
-
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="pbhtrigo.html">P/B/H Trigo</a>
-                        </h3>
-                    </div>
-                </div>
-
-
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/Trigonmetry Values.webp" alt="course banner">
-                    </div>
-
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="TrigonometryValues.html">Trigonometry Values</a>
-                        </h3>
-                    </div>
-                </div>
-
-
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/Inverse Trignometric Identities.webp" alt="course banner">
-                    </div>
-
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="Inversetrigonometryidentities.html">Inverse Trigonometric Identities</a>
-                        </h3>
-                    </div>
-                </div>
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
 </body>
 
 </html>

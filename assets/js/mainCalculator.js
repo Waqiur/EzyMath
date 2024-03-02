@@ -5,8 +5,8 @@ function resetCalculator() {
     form.forEach(element => {
         element.reset();
     })
-    output.forEach(element => {
-        element.innerHTML = "";
+    output.forEach(element2 => {
+        element2.innerHTML = "";
     });
 }
 
@@ -210,4 +210,285 @@ function twice() {
         document.getElementById("solutionTwice").innerHTML = "\\[Please \\space enter \\space all \\space the \\space values\\]";
     }
     renderMathInElement(document.getElementById("solutionTwice"));
+}
+
+//PBH Ratio
+function calcexsolvesimpletrigo() {
+    var pp = document.getElementById("perpendicular").value = 3;
+    var base = document.getElementById("base").value;
+    var hyp = document.getElementById("hypotenuse").value = 5;
+
+    solvesimpletrigo();
+}
+
+function pbhRatios() {
+    var pp = document.getElementById("perpendicular").value;
+    var base = document.getElementById("base").value;
+    var hyp = document.getElementById("hypotenuse").value;
+    if ((pp == "" && base == "") || (base == "" && hyp == "") || (hyp == "" && pp == "")) {
+        document.getElementById("solution").innerHTML =
+            "Kindly fill Atleast 2 fields";
+    }
+    else if (pp < 0 || base < 0 || hyp < 0) {
+        document.getElementById("solution").innerHTML = "The sides cannot be negative"
+    }
+    else {
+        if (parseInt(hyp) < parseInt(pp) || parseInt(hyp) < parseInt(base)) {
+            document.getElementById("solution").innerHTML =
+                "Hypotenuse Should be Greater";
+        } else if (pp != "" && base != "" && hyp != "" && parseInt(hyp) ^ 2 != parseInt(pp) ^ 2 + parseInt(base) ^ 2 && parseInt(hyp) ^ 2 != parseInt(base) ^ 2 + parseInt(pp) ^ 2) {
+            document.getElementById("solution").innerHTML =
+                "Right angled triangle with such dimensions is not possible";
+        } else if (pp == "") {
+            var pp = eval(hyp * hyp - base * base);
+            var kl = String(pp);
+            pp = Math.sqrt(String(pp));
+            if (pp.toString() != "NaN") {
+                pp = pp.toFixed(2);
+                var tempp =
+                    "\\[Value\\space of\\space  Perpendicular= \\sqrt{" +
+                    kl +
+                    "}=" +
+                    pp +
+                    "\\]";
+                tempp +=
+                    String(
+                        "\\[sin\\theta =\\frac{p}{h} =\\frac{" +
+                        pp +
+                        "}{" +
+                        hyp +
+                        "} = " +
+                        eval(String(pp + "/" + hyp)).toFixed(2)
+                    ) + "\\]";
+                tempp +=
+                    "\\[cos\\theta =\\frac{b}{h} =\\frac{" +
+                    base +
+                    "}{" +
+                    hyp +
+                    "}= " +
+                    eval(String(base + "/" + hyp)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[tan\\theta=\\frac{p}{b} =\\frac{" +
+                    pp +
+                    "}{" +
+                    base +
+                    "}= " +
+                    eval(String(pp + "/" + base)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[cosec\\theta=\\frac{h}{p} =\\frac{" +
+                    hyp +
+                    "}{" +
+                    pp +
+                    "}= " +
+                    eval(String(hyp + "/" + pp)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[sec\\theta=\\frac{h}{b} =\\frac{" +
+                    hyp +
+                    "}{" +
+                    base +
+                    "}= " +
+                    eval(String(hyp + "/" + base)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[cot\\theta=\\frac{b}{p} =\\frac{" +
+                    base +
+                    "}{" +
+                    pp +
+                    "}= " +
+                    eval(String(base + "/" + pp)).toFixed(2) +
+                    "\\]";
+                document.getElementById("solution").innerHTML = tempp;
+                renderMathInElement(document.getElementById("solution"));
+            } else {
+                document.getElementById("solution").innerHTML =
+                    "Cannot Compute for -ve Square Root";
+            }
+        } else if (base == "") {
+            var base = eval(hyp * hyp - pp * pp);
+            var kll = String(base);
+            base = Math.sqrt(String(base));
+            if (base.toString() != "NaN") {
+                base = base.toFixed(2);
+                var tempp =
+                    "\\[Value\\space of\\space Base= \\sqrt{" + kll + "}=" + base + "\\]";
+                tempp +=
+                    String(
+                        "\\[sin\\theta =\\frac{p}{h} =\\frac{" +
+                        pp +
+                        "}{" +
+                        hyp +
+                        "} = " +
+                        eval(String(pp + "/" + hyp)).toFixed(2)
+                    ) + "\\]";
+                tempp +=
+                    "\\[cos\\theta=\\frac{b}{h} =\\frac{" +
+                    base +
+                    "}{" +
+                    hyp +
+                    "} = " +
+                    eval(String(base + "/" + hyp)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[tan\\theta=\\frac{p}{b} =\\frac{" +
+                    pp +
+                    "}{" +
+                    base +
+                    "}= " +
+                    eval(String(pp + "/" + base)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[cosec\\theta=\\frac{h}{p} =\\frac{" +
+                    hyp +
+                    "}{" +
+                    pp +
+                    "}= " +
+                    eval(String(hyp + "/" + pp)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[sec\\theta=\\frac{h}{b} =\\frac{" +
+                    hyp +
+                    "}{" +
+                    base +
+                    "} = " +
+                    eval(String(hyp + "/" + base)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[cot\\theta=\\frac{b}{p} =\\frac{" +
+                    base +
+                    "}{" +
+                    pp +
+                    "} = " +
+                    eval(String(base + "/" + pp)).toFixed(2) +
+                    "\\]";
+                document.getElementById("solution").innerHTML = tempp;
+                renderMathInElement(document.getElementById("solution"));
+            } else {
+                document.getElementById("solution").innerHTML =
+                    "Cannot Compute for -ve Square Root";
+            }
+        } else if (hyp == "") {
+            var hyp = eval(base * base + pp * pp);
+            var klll = String(hyp);
+            hyp = Math.sqrt(String(hyp));
+            if (hyp.toString() != "NaN") {
+                hyp = hyp.toFixed(2);
+                var tempp =
+                    "\\[Value\\space of\\space Hypotenuse=\\sqrt{" +
+                    klll +
+                    "}=" +
+                    hyp +
+                    "\\]";
+                tempp +=
+                    String(
+                        "\\[sin\\theta =\\frac{p}{h} =\\frac{" +
+                        pp +
+                        "}{" +
+                        hyp +
+                        "}= " +
+                        eval(String(pp + "/" + hyp)).toFixed(2)
+                    ) + "\\]";
+                tempp +=
+                    "\\[cos\\theta=\\frac{b}{h} =\\frac{" +
+                    base +
+                    "}{" +
+                    hyp +
+                    "}= " +
+                    eval(String(base + "/" + hyp)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[tan\\theta=\\frac{p}{b} =\\frac{" +
+                    pp +
+                    "}{" +
+                    base +
+                    "}= " +
+                    eval(String(pp + "/" + base)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[cosec\\theta=\\frac{h}{p} =\\frac{" +
+                    hyp +
+                    "}{" +
+                    pp +
+                    "}= " +
+                    eval(String(hyp + "/" + pp)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[sec\\theta=\\frac{h}{b} =\\frac{" +
+                    hyp +
+                    "}{" +
+                    base +
+                    "}= " +
+                    eval(String(hyp + "/" + base)).toFixed(2) +
+                    "\\]";
+                tempp +=
+                    "\\[cot\\theta=\\frac{b}{p} =\\frac{" +
+                    base +
+                    "}{" +
+                    pp +
+                    "} = " +
+                    eval(String(base + "/" + pp)).toFixed(2) +
+                    "\\]";
+
+                document.getElementById("solution").innerHTML = tempp;
+                renderMathInElement(document.getElementById("solution"));
+            } else {
+                document.getElementById("solution").innerHTML =
+                    "Cannot Compute for -ve Square Root";
+            }
+        } else {
+            var tempp =
+                String(
+                    "\\[sin\\theta =\\frac{p}{h} =\\frac{" +
+                    pp +
+                    "}{" +
+                    hyp +
+                    "} = " +
+                    eval(String(pp + "/" + hyp)).toFixed(2)
+                ) + "\\]";
+            tempp +=
+                "\\[cos\\theta=\\frac{b}{h} =\\frac{" +
+                base +
+                "}{" +
+                hyp +
+                "}=" +
+                eval(String(base + "/" + hyp)).toFixed(2) +
+                "\\]";
+            tempp +=
+                "\\[tan\\theta=\\frac{p}{b} =\\frac{" +
+                pp +
+                "}{" +
+                base +
+                "}= " +
+                eval(String(pp + "/" + base)).toFixed(2) +
+                "\\]";
+            tempp +=
+                "\\[cosec\\theta=\\frac{h}{p} =\\frac{" +
+                hyp +
+                "}{" +
+                pp +
+                "} = " +
+                eval(String(hyp + "/" + pp)).toFixed(2) +
+                "\\]";
+            tempp +=
+                "\\[sec\\theta=\\frac{h}{b} =\\frac{" +
+                hyp +
+                "}{" +
+                base +
+                "} = " +
+                eval(String(hyp + "/" + base)).toFixed(2) +
+                "\\]";
+            tempp +=
+                "\\[cot\\theta=\\frac{b}{p} =\\frac{" +
+                base +
+                "}{" +
+                pp +
+                "}= " +
+                eval(String(base + "/" + pp)).toFixed(2) +
+                "\\]";
+            document.getElementById("solution").innerHTML = tempp;
+            renderMathInElement(document.getElementById("solution"));
+        }
+    }
 }

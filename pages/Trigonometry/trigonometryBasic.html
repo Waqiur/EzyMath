@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trigonometry Basics</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- KATEX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+        integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+        integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">Trigonometry Basics</h4>
+
+                <div class="content">
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Trigonometric Ratios</h4>
+                        <img class="point-img" src="../../assets/images/Triangle.webp" alt="Triangle Image">
+                        <p>\( \text{sin} = \frac{\text{Opposite side}}{\text{Hypotenuse}} \)</p>
+                        <p>\( \text{cos} = \frac{\text{Adjacent side}}{\text{Hypotenuse}} \)</p>
+                        <p>\( \text{tan} = \frac{\text{Opposite side}}{\text{Adjacent side}} \)</p>
+                        <p>\( \text{cosec} = \frac{\text{Hypotenuse}}{\text{Opposite side}} \)</p>
+                        <p>\( \text{sec} = \frac{\text{Hypotenuse}}{\text{Adjacent side}} \)</p>
+                        <p>\( \text{cot} = \frac{\text{Adjacent side}}{\text{Opposite side}} \)</p>
+                    </div>
+
+                    
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Trigonometric Indenties</h4>
+                        <p>\( \sin^2\theta + \cos^2\theta = 1 \)</p>
+                        <p>\( \tan^2\theta + 1 = \sec^2\theta \)</p>
+                        <p>\( \cot^2\theta + 1 = \csc^2\theta \)</p>
+                        <p>\( \sin 2\theta = 2 \sin \theta \cos \theta \)</p>
+                        <p>\( \cos 2\theta = \cos^2\theta - \sin^2\theta \)</p>
+                        <p>\( \tan 2\theta = \frac{2 \tan \theta}{1 - \tan^2\theta} \)</p>
+                        <p>\( \cot 2\theta = \frac{\cot^2\theta - 1}{2 \cot \theta} \)</p>
+
+                        <table class="margin-top-large identities-table">
+                            <thead>
+                                <tr>
+                                    <th>Quadrant I</th>
+                                    <th>Quadrant II</th>
+                                    <th>Quadrant III</th>
+                                    <th>Quadrant IV</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\( \sin\left(\frac{\pi}{2} - \theta\right) = \cos \theta \)</td>
+                                    <td>\( \sin(\pi - \theta) = \cos \theta \)</td>
+                                    <td>\( \sin(\pi + \theta) = -\sin \theta \)</td>
+                                    <td>\( \sin(2\pi - \theta) = -\sin \theta \)</td>
+                                </tr>
+                                <tr>
+                                    <td>\( \cos\left(\frac{\pi}{2} - \theta\right) = \sin \theta \)</td>
+                                    <td>\( \cos(\pi - \theta) = -\cos \theta \)</td>
+                                    <td>\( \cos(\pi + \theta) = -\cos \theta \)</td>
+                                    <td>\( \cos(2\pi - \theta) = \cos \theta \)</td>
+                                </tr>
+                                <tr>
+                                    <td>\( \tan\left(\frac{\pi}{2} - \theta\right) = \cot \theta \)</td>
+                                    <td>\( \tan(\pi - \theta) = -\tan \theta \)</td>
+                                    <td>\( \tan(\pi + \theta) = \tan \theta \)</td>
+                                    <td>\( \tan(2\pi - \theta) = -\tan \theta \)</td>
+                                </tr>
+                                <tr>
+                                    <td>\( \cot\left(\frac{\pi}{2} - \theta\right) = \tan \theta \)</td>
+                                    <td>\( \cot(\pi - \theta) = -\cot \theta \)</td>
+                                    <td>\( \cot(\pi + \theta) = \cot \theta \)</td>
+                                    <td>\( \cot(2\pi - \theta) = -\cot \theta \)</td>
+                                </tr>
+                                <tr>
+                                    <td>\( \sec\left(\frac{\pi}{2} - \theta\right) = \csc \theta \)</td>
+                                    <td>\( \sec(\pi - \theta) = -\sec \theta \)</td>
+                                    <td>\( \sec(\pi + \theta) = -\sec \theta \)</td>
+                                    <td>\( \sec(2\pi - \theta) = \sec \theta \)</td>
+                                </tr>
+                                <tr>
+                                    <td>\( \csc\left(\frac{\pi}{2} - \theta\right) = \sec \theta \)</td>
+                                    <td>\( \csc(\pi - \theta) = \csc \theta \)</td>
+                                    <td>\( \csc(\pi + \theta) = -\csc \theta \)</td>
+                                    <td>\( \csc(2\pi - \theta) = -\csc \theta \)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Domain and Range of function</h4>
+                        <p>\( \text{sin} : \mathbb{R} \rightarrow [-1, 1] \)</p>
+                        <p>\( \text{cos} : \mathbb{R} \rightarrow [-1, 1] \)</p>
+                        <p>\( \text{tan} : \mathbb{R} - \{ x : x = (2n + 1) \frac{\pi}{2}, n \in \mathbb{Z} \}
+                            \rightarrow \mathbb{R} \)</p>
+                        <p>\( \text{cot} : \mathbb{R} - \{ x : x = n\pi, n \in \mathbb{Z} \} \rightarrow \mathbb{R} \)
+                        </p>
+                        <p>\( \text{sec} : \mathbb{R} - \{ x : x = (2n + 1) \frac{\pi}{2}, n \in \mathbb{Z} \}
+                            \rightarrow \mathbb{R} - (-1, 1) \)</p>
+                        <p>\( \text{csc} : \mathbb{R} - \{ x : x = n\pi, n \in \mathbb{Z} \} \rightarrow \mathbb{R} -
+                            (-1, 1) \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Graphs of Basic Trigonometry function</h4>
+                        <ol class="content-block-list">
+                            <li>sin function<br><img class="point-img" src="../../assets/images/sin_image.webp"></li>
+                            <li>cos function<br><img class="point-img" src="../../assets/images/cos_image.webp"></li>
+                            <li>tan function<br><img class="point-img" src="../../assets/images/tan_image.webp"></li>
+                        </ol>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Reciprocal Identities</h4>
+                        <p>\( \csc \theta = \frac{1}{\sin \theta} \)</p>
+                        <p>\( \sec \theta = \frac{1}{\cos \theta} \)</p>
+                        <p>\( \cot \theta = \frac{1}{\tan \theta} \)</p>
+                        <p>\( \sin \theta = \frac{1}{\csc \theta} \)</p>
+                        <p>\( \cos \theta = \frac{1}{\sec \theta} \)</p>
+                        <p>\( \tan \theta = \frac{1}{\cot \theta} \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Sine and Cosine Laws</h4>
+                        <p>If A, B and C are angles and a, b and c are the sides of a triangle, then,</p>
+                        <p>\( \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \)</p>
+                        <p>\( c^2 = a^2 + b^2 - 2ab \cdot \cos C \)</p>
+                        <p>\( a^2 = b^2 + c^2 - 2bc \cdot \cos A \)</p>
+                        <p>\( b^2 = a^2 + c^2 - 2ac \cdot \cos B \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Basic Trigonometric sum and difference Identies</h4>
+                        <p>For angles u and v, we have the following relationships:</p>
+                        <p>\( \sin(u + v) = \sin(u) \cdot \cos(v) + \cos(u) \cdot \sin(v) \)</p>
+                        <p>\( \cos(u + v) = \cos(u) \cdot \cos(v) - \sin(u) \cdot \sin(v) \)</p>
+                        <p>\( \tan(u+v) = \frac{\tan(u) + \tan(v)}{1 - \tan(u) \cdot \tan(v)} \)</p>
+                        <p>\( \sin(u - v) = \sin(u) \cdot \cos(v) - \cos(u) \cdot \sin(v) \)</p>
+                        <p>\( \cos(u - v) = \cos(u) \cdot \cos(v) + \sin(u) \cdot \sin(v) \)</p>
+                        <p>\( \tan(u-v) = \frac{\tan(u) - \tan(v)}{1 + \tan(u) \cdot \tan(v)} \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Periodicity Identities (in Radians)</h1>
+                        <p>These formulas are used to shift the angles by \( \frac{\pi}{2} \), \( \pi \), \( 2\pi \),
+                            etc. :</p>
+                        <p>\( \sin(\frac{\pi}{2} - A) = \cos A , \cos(\frac{\pi}{2} - A) = \sin A\) </p>
+                        <p>\( \sin(\frac{\pi}{2} + A) = \cos A , \cos(\frac{\pi}{2} + A) = -\sin A\) </p>
+                        <p>\( \sin(\frac{3\pi}{2} - A) = -\cos A , \cos(\frac{3\pi}{2} - A) = -\sin A\) </p>
+                        <p>\( \sin(\frac{3\pi}{2} + A) = -\cos A , \cos(\frac{3\pi}{2} + A) = \sin A\) </p>
+                        <p>\( \sin(\pi - A) = \sin A , \cos(\pi - A) = -\cos A\) </p>
+                        <p>\( \sin(\pi + A) = -\sin A , \cos(\pi + A) = -\cos A\) </p>
+                        <p>\( \sin(2\pi - A) = -\sin A , \cos(2\pi - A) = \cos A\) </p>
+                        <p>\( \sin(2\pi + A) = \sin A , \cos(2\pi + A) = \cos A\) </p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Periodicity Identities (in Degrees)</h1>
+                        <p>\( \sin(90°−x) = \cos x\) </p>
+                        <p>\( \cos(90°−x) = \sin x\) </p>
+                        <p>\( \tan(90°−x) = \cot x\) </p>
+                        <p>\( \cot(90°−x) = \tan x\) </p>
+                        <p>\( \sec(90°−x) = \csc x\) </p>
+                        <p>\( \csc(90°−x) = \sec x\) </p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Sign of Trigonometric Functions</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Quadrants</th>
+                                    <th>I</th>
+                                    <th>II</th>
+                                    <th>III</th>
+                                    <th>IV</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>sin θ</td>
+                                    <td>+ve</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                    <td>-ve</td>
+                                </tr>
+                                <tr>
+                                    <td>cos θ</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                    <td>-ve</td>
+                                    <td>+ve</td>
+                                </tr>
+                                <tr>
+                                    <td>tan θ</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                </tr>
+                                <tr>
+                                    <td>cosec θ</td>
+                                    <td>+ve</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                    <td>-ve</td>
+                                </tr>
+                                <tr>
+                                    <td>sec θ</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                    <td>-ve</td>
+                                    <td>+ve</td>
+                                </tr>
+                                <tr>
+                                    <td>cot θ</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                    <td>+ve</td>
+                                    <td>-ve</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>\( \sin(-\theta) = -\sin \theta \)</p>
+                        <p>\( \cos(-\theta) = \cos \theta \)</p>
+                        <p>\( \tan(-\theta) = -\tan \theta \)</p>
+                        <p>\( \cot(-\theta) = -\cot \theta \)</p>
+                        <p>\( \sec(-\theta) = \sec \theta \)</p>
+                        <p>\( \cosec(-\theta) = -\cosec \theta \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Double Angle Identities</h1>
+                        <p>\( \sin(2x) = 2\sin(x) \cdot \cos(x) = \frac{2\tan x}{1+\tan^2 x} \)</p>
+                        <p>\( \cos(2x) = \cos^2(x) - \sin^2(x) = \frac{1-\tan^2 x}{1+\tan^2 x} \)</p>
+                        <p>\( \cos(2x) = 2\cos^2(x)-1 = 1-2\sin^2(x) \)</p>
+                        <p>\( \tan(2x) = \frac{2\tan(x)}{1-\tan^2(x)} \)</p>
+                        <p>\( \sec(2x) = \frac{\sec^2 x}{2-\sec^2 x} \)</p>
+                        <p>\( \csc(2x) = \frac{\sec x \cdot \csc x}{2} \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Triple Angle Identities</h1>
+                        <p>\( \sin 3x = 3\sin x - 4\sin^3 x \)</p>
+                        <p>\( \cos 3x = 4\cos^3 x - 3\cos x \)</p>
+                        <p>\( \tan 3x = \frac{3\tan x - \tan^3 x}{1-3\tan^2 x} \)</p>
+                        <p>\( \cot 3x = \frac{\cot^3 x - 3\cot x}{3\cot^2 x - 1} \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Half Angle Identities :</h1>
+                        <p>\( \sin\frac{x}{2} = \pm\sqrt{\frac{1-\cos x}{2}} \)</p>
+                        <p>\( \cos\frac{x}{2} = \pm\sqrt{\frac{1+\cos x}{2}} \)</p>
+                        <p>\( \tan\frac{x}{2} = \pm\sqrt{\frac{1-\cos x}{1+\cos x}} \)</p>
+
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Product Identities</h1>
+                        <p>\( \sin x \cdot \cos y = \frac{\sin(x+y)+\sin(x-y)}{2} \)</p>
+                        <p>\( \cos x \cdot \cos y = \frac{\cos(x+y)+\cos(x-y)}{2} \)</p>
+                        <p>\( \sin x \cdot \sin y = \frac{\cos(x-y)-\cos(x+y)}{2} \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Sum to Product Identities</h1>
+                        <p>\( \sin x + \sin y = 2\sin\left(\frac{x+y}{2}\right) \cdot \cos\left(\frac{x-y}{2}\right) \)
+                        </p>
+                        <p>\( \sin x - \sin y = 2\cos\left(\frac{x+y}{2}\right) \cdot \sin\left(\frac{x-y}{2}\right) \)
+                        </p>
+                        <p>\( \cos x + \cos y = 2\cos\left(\frac{x+y}{2}\right) \cdot \cos\left(\frac{x-y}{2}\right) \)
+                        </p>
+                        <p>\( \cos x - \cos y = -2\sin\left(\frac{x+y}{2}\right) \cdot \sin\left(\frac{x-y}{2}\right) \)
+                        </p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Inverse Trigonometry Formulas</h1>
+                        <p>\( \sin^{-1}\left(\frac{1}{a}\right) = \csc^{-1}(a) \), \( a \geq 1 \) or \( a \leq -1 \)</p>
+                        <p>\( \cos^{-1}\left(\frac{1}{a}\right) = \sec^{-1}(a) \), \( a \geq 1 \) or \( a \leq -1 \)</p>
+                        <p>\( \tan^{-1}\left(\frac{1}{a}\right) = \cot^{-1}(a) \), \( a > 0 \)</p>
+                        <p>\( \sin^{-1}(-a) = -\sin^{-1}(a) \), \( a \in [-1, 1] \)</p>
+                        <p>\( \tan^{-1}(-a) = -\tan^{-1}(a) \), \( a \in \mathbb{R} \)</p>
+                        <p>\( \csc^{-1}(-a) = -\csc^{-1}(a) \), \( |a| \geq 1 \)</p>
+                        <p>\( \cos^{-1}(-a) = \pi - \cos^{-1}(a) \), \( a \in [-1, 1] \)</p>
+                        <p>\( \sec^{-1}(-a) = \pi - \sec^{-1}(a) \), \( |a| \geq 1 \)</p>
+                        <p>\( \cot^{-1}(-a) = \pi - \cot^{-1}(a) \), \( a \in \mathbb{R} \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading"> Addition Properties</h1>
+                        <p>\( \sin^{-1}a + \cos^{-1}a = \frac{\pi}{2} \), \( a \in [-1, 1] \)</p>
+                        <p>\( \tan^{-1}a + \cot^{-1}a = \frac{\pi}{2} \), \( a \in \mathbb{R} \)</p>
+                        <p>\( \csc^{-1}a + \sec^{-1}a = \frac{\pi}{2} \), \( |a| \geq 1 \)</p>
+                        <p>\( \tan^{-1}a + \tan^{-1}b = \tan^{-1} \left( \frac{a+b}{1-ab} \right) \), \( ab<1 \)</p>
+                                <p>\( \tan^{-1}a - \tan^{-1}b = \tan^{-1} \left( \frac{a-b}{1+ab} \right) \), \( ab>-1
+                                    \)</p>
+                                <p>\( \tan^{-1}a - \tan^{-1}b = \pi + \tan^{-1} \left( \frac{a+b}{1-ab} \right) \), \(
+                                    ab > 1 \); \( a,b > 0 \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading"> Twice of Inverse of tan Function</h1>
+                        <p>\( 2\tan^{-1}a = \sin^{-1} \left( \frac{2a}{1+a^2} \right) \), \( |a| \leq 1 \)</p>
+                        <p>\( 2\tan^{-1}a = \cos^{-1} \left( \frac{1-a^2}{1+a^2} \right) \), \( a \geq 0 \)</p>
+                        <p>\( 2\tan^{-1}a = \tan^{-1} \left( \frac{2a}{1+a^2} \right) \), \( -1 < a < 1 \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Inverse Trigonometry Substitution</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Expression</th>
+                                    <th>Substitution</th>
+                                    <th>Identity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>√(a² - x²)</td>
+                                    <td>x = a sin θ</td>
+                                    <td>1 - sin²θ = cos²θ</td>
+                                </tr>
+                                <tr>
+                                    <td>√(a² + x²)</td>
+                                    <td>x = a tan θ</td>
+                                    <td>1 - tan²θ = sec²θ</td>
+                                </tr>
+                                <tr>
+                                    <td>√(x² - a²)</td>
+                                    <td>x = a sec θ</td>
+                                    <td>sec²θ - 1 = tan²θ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-block">
+                        <h1 class="secondary-heading">Complementary Ratios</h1>
+                        <img src="../../assets/images/Cirle With Quadrant.webp">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
