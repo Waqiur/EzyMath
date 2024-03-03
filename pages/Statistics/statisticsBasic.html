@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Statistics Basics</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- KATEX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+        integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+        integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">Statistics Basic</h4>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>\[\boldsymbol{Mean}\]</th>
+                            <td>\[\bar{x}=\frac{\sum x}{n}\]</td>
+                            <td>
+                                <p>\[x\,=\, Observations \,given\]</p>
+                                <p>\[n\, =\, Total\, number\, of\]</p>
+                                <p>\[observations\]</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>\[\boldsymbol{Median}\]</th>
+                            <td >
+                                <p>\[If\, n\, is\, odd,\, then\]</p>
+                                <p>\[M\,=(\frac{n+1}{2})\,term\]</p>
+                                <p>\[If\, n\, is\, even,\, then\]</p>
+                                <p>\[M
+                                    \,=\,\frac{(\frac{n}{2})^{th}term+(\frac{n}{2}+1)^{th}term}{2}\]</p>
+                            </td>
+                            <td>
+                                <p>\[n \,= \,Total\, number \,of\]</p>
+                                <p> \[observations\]</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>\[ \boldsymbol{Mode} \]</th>
+                            <td>
+                                <p></p>\[The\, value\, which\, occurs\]</p>
+                                <p>\[most\, frequently\]</p>
+                            </td>
+                            <td>\[-\]</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>\[ \boldsymbol{Variance} \]</th>
+                            <td>\[ \sigma ^{2} = \frac{\sum (x-\bar{x})^{2}}{n} \]</td>
+                            <td>
+                                <p>\[ x = \text{Observations given} \]</p>
+                                <p>\[ \bar{x} = \text{Mean} \]</p>
+                                <p>\[ n = \text{Total number of observations} \]</p>
+                                <p>\[ \text{observations} \]</p>
+                            </td>
+                        </tr>
+                        
+
+                        <tr>
+                            <th>\[ \boldsymbol{Standard \,Deviation} \]</th>
+                            <td>\[ S = \sigma = \sqrt{\frac{\sum (x-\bar{x})^{2}}{n}} \]</td>
+                            <td>
+                                <p>\[ x = \text{Observations given} \]</p>
+                                <p>\[ \bar{x} = \text{Mean} \]</p>
+                                <p>\[ n = \text{Total number of observations} \]</p>
+                                <p>\[ \text{observations} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>\[ \boldsymbol{Range} \]</th>
+                            <td>\[ L-S \]</td>
+                            <td>
+                                <p>\[ L = \text{Largest value} \]</p>
+                                <p>\[ S = \text{Smallest value} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>\[ \boldsymbol{Coeff.\,of\,Range} \]</th>
+                            <td>\[ \frac{L-S}{L+S} \]</td>
+                            <td>
+                                <p>\[ L = \text{Largest value} \]</p>
+                                <p>\[ S = \text{Smallest value} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>\[ \boldsymbol{Coeff.\,of\,Variation} \]</th>
+                            <td>\[ \frac{\sigma}{\bar{x}} * 100 \]</td>
+                            <td>
+                                <p>\[ \sigma = \text{Standard Deviation} \]</p>
+                                <p>\[ \bar{x} = \text{Mean} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>\[ \boldsymbol{Combined \,Mean} \]</th>
+                            <td>\[ \frac{m\bar{x} + n\bar{y}}{m+n} \]</td>
+                            <td>
+                                <p>\[ \frac{\bar{x}}{\bar{y}} = \text{Mean of two distributions} \]</p>
+                                <p>\[ \frac{m}{n} = \text{no. of elements in each distributions} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>\[ \boldsymbol{Weighted\,Mean} \]</th>
+                            <td>\[ \frac{\sum Wi \cdot xi}{\sum Wi} \]</td>
+                            <td>
+                                <p>\[ Wi = \text{Weight of each distributions} \]</p>
+                                <p>\[ xi = \text{ith observation} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>\[ \boldsymbol{Mean\,Deviation} \]</p>
+                                <p>\[ \boldsymbol{about\,mean} \]</p>
+                                <p>\[ \boldsymbol{\bar{X}} \]</p>
+                            </th>
+                            <td>\[ \frac{\sum|xi-\bar{x}|}{n} \]</td>
+                            <td>
+                                <p>\[ n = \text{Total number of observations} \]</p>
+                                <p>\[ \text{observations} \]</p>
+                                <p>\[ \bar{x} = \text{Mean} \]</p>
+                                <p>\[ xi = \text{ith observation} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>\[ \boldsymbol{Mean\,Deviation} \]</p>
+                                <p>\[ \boldsymbol{about\,median} \]</p>
+                                <p>\[ \boldsymbol{M} \]</p>
+                            </th>
+                            <td>\[ \frac{\sum|xi-M|}{n} \]</td>
+                            <td>
+                                <p>\[ n = \text{Total number of observations} \]</p>
+                                <p>\[ \text{observations} \]</p>
+                                <p>\[ M = \text{Median} \]</p>
+                                <p>\[ xi = \text{ith observation} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>\[ \boldsymbol{Mean\,Deviation} \]</p>
+                                <p>\[ \boldsymbol{about\,mode} \]</p>
+                                <p>\[ \boldsymbol{Z} \]</p>
+                            </th>
+                            <td>\[ \frac{\sum|xi-Z|}{n} \]</td>
+                            <td>
+                                <p>\[ n = \text{Total number of observations} \]</p>
+                                <p>\[ \text{observations} \]</p>
+                                <p>\[ Z = \text{Mode} \]</p>
+                                <p>\[ xi = \text{ith observation} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>\[ \boldsymbol{Mean\,Deviation} \]</p>
+                                <p>\[ \boldsymbol{about\,any\,no.\,\,a} \]</p>
+                            </th>
+                            <td>\[ \frac{\sum|xi-a|}{n} \]</td>
+                            <td>
+                                <p>\[ n = \text{Total number of observations} \]</p>
+                                <p>\[ \text{observations} \]</p>
+                                <p>\[ xi = \text{ith observation} \]</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>\[ \boldsymbol{For \,symmetrical} \]</p>
+                                <p>\[ \boldsymbol{Distribution} \]</p>
+                            </th>
+                            <td>\[Mode\,=\,3Median\,-\,2Mean\]</td>
+                            <td>\[-\]</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
