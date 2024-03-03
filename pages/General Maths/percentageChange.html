@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fractions</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/animation.css">
+    <link href="../../katex/katex.min.css" rel="stylesheet">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- JS -->
+    <script defer src="../../katex/katex.min.js"></script>
+    <script defer src="../../katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script defer src="../../assets/js/mainCalculator.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="secondary-heading">Percentage change</h4>
+
+                <form action="" class="form" autocomplete="off">
+                    <div class="calc-container negative-margin">
+                        <div class="input-container flex-column">
+                            <input type="number" id="initialValue" class="form-input wide-input"
+                                placeholder="Enter the initial value">
+                            <input type="number" id="finalValue" class="form-input wide-input"
+                                placeholder="Enter the final value">
+                        </div>
+                        <div class="button-container">
+                            <button type="button" class="calc-btn calc-btn-light" onclick="percentageChange()">Solve</button>
+                            <button type="button" class="calc-btn calc-btn-dark"
+                                onclick="resetCalculator()">Reset</button>
+                        </div>
+                    </div>
+                </form>
+                <p>&nbsp;</p>
+                <div class="solution" id="solution">
+                </div>
+        </main>
+    </div>
+</body>
+
+</html>

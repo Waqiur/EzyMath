@@ -492,3 +492,131 @@ function pbhRatios() {
         }
     }
 }
+
+// Percentage Change
+function percentageChange() {
+    var initial = parseInt(document.getElementById("initialValue").value);
+    var final = parseInt(document.getElementById("finalValue").value);
+    var output = document.getElementById("solution");
+    var temp = "";
+
+    if (!isNaN(initial) && !isNaN(final)) {
+        var ans = ((final - initial) / Math.abs(initial)) * 100;
+
+        temp += "\\[The \\space Percentage \\space change \\space will \\space be,\\]"
+        temp += "\\[\\frac{((Final value) - (Initial value))}{ |(Initial value)| } \\times 100\\]"
+        temp += "\\[\\space = \\space \\frac{((" + final + ") - (" + initial + "))}{ |(" + initial + ")| } \\times 100\\]"
+        temp += "\\[\\space = \\space \\frac{" + (final - initial) + "}{ |(" + initial + ")| } \\times 100\\]"
+        temp += "\\[\\space = \\space \\frac{" + (final - initial) + "}{ " + (Math.abs(initial)) + " } \\times 100\\]"
+        temp += "\\[\\space = \\space " + ((final - initial) / Math.abs(initial)).toFixed(2) + " \\times 100\\]"
+        temp += "\\[\\space = \\space " + ans.toFixed(3) + "\\]"
+        temp += "\\[Hence, \\space" + final + " \\space is \\space a \\space " + ans.toFixed(2) + " \\space \\% change \\space of \\space " + initial + "\\]"
+        output.innerHTML = temp;
+    }
+    else {
+        temp += "\\[Please \\space enter \\space valid \\space input\\]"
+    }
+    renderMathInElement(output);
+}
+
+// Percentage change in sphere
+function changeInSphere() {
+    var x = document.getElementById("changeInRadius").value;
+    var per = Math.pow(x, 3) / 10000 + 3 * x + (3 * Math.pow(x, 2)) / 100;
+    var output = document.getElementById("solutionSphere");
+    var temp = "";
+    if (x != "") {
+        temp += "\\[Percentage \\space increase \\space in \\space the \\space volume \\space of \\space the \\space sphere \\space is \\space\\]";
+        temp += "\\[= \\space \\frac{(change \\space in \\space radius)^3}{10000} + 3\\times (change \\space in \\space radius) + \\frac{(3 \\times (change \\space in \\space radius)^2)}{100}\\]";
+        temp += "\\[= \\space \\frac{" + x + "^3}{10000} + 3\\times " + x + " + \\frac{(3 \\times " + x + "^2)}{100}\\]";
+        temp += "\\[= \\space " + (Math.pow(x, 3) / 10000).toFixed(2) + " + " + (3 * x).toFixed(2) + " + " + ((3 * Math.pow(x, 2)) / 100).toFixed(2) + " \\]";
+        temp += "\\[= \\space " + per.toFixed(3) + " \\% \\]";
+        output.innerHTML = temp;
+    } else {
+        temp = "\\[Enter \\space all \\space values\\]";
+        output.innerHTML = temp;
+    }
+    renderMathInElement(output);
+}
+
+// percentage change in Cube
+function changeInCube() {
+    var x = document.getElementById("changeInSide").value;
+    var per = (Math.pow(x, 3) / 10000 + 3 * x + (3 * Math.pow(x, 2)) / 100);
+    var output = document.getElementById("solutionCube");
+    var temp = "";
+    if (x != "") {
+        temp += "\\[Percentage \\space increase \\space in \\space the \\space volume \\space of \\space the \\space cube \\space is \\space\\]";
+        temp += "\\[= \\space \\frac{(change \\space in \\space radius)^3}{10000} + 3\\times (change \\space in \\space radius) + \\frac{(3 \\times (change \\space in \\space radius)^2)}{100}\\]";
+        temp += "\\[= \\space\\frac{" + x + "^3}{10000} + 3\\times " + x + " + \\frac{(3 \\times " + x + "^2)}{100}\\]";
+        temp += "\\[= \\space " + (Math.pow(x, 3) / 10000).toFixed(2) + " + " + (3 * x).toFixed(2) + " + " + ((3 * Math.pow(x, 2)) / 100).toFixed(2) + " \\]";
+        temp += "\\[= \\space " + per.toFixed(3) + " \\% \\]";
+        output.innerHTML = temp;
+    } else {
+        temp += "\\[Enter \\space all \\space values\\]";
+        output.innerHTML = temp;
+    }
+    renderMathInElement(output);
+}
+
+// percentage change in Cuboid
+function changeInCuboid() {
+    var l = document.getElementById("changeInLength").value;
+    var b = document.getElementById("changeInBreadth").value;
+    var h = document.getElementById("changeInHeight").value;
+    var percentInc = ((1 + (l / 100)) * (1 + (b / 100)) * (1 + (h / 100)) - 1) * 100;
+    var output = document.getElementById("solutionCuboid");
+    var temp = "";
+    if (l != "" && b != "" && h != "") {
+        temp += "\\[Percentage \\space increase \\space in \\space the \\space volume \\space of \\space the \\space cuboid \\space is \\space\\]";
+        temp += "\\[= \\space ((1 + \\frac{Change \\space in \\space length}{100}) \\times (1 + \\frac{Change \\space in \\space breadth}{100}) \\times (1 + \\frac{Change \\space in \\space height}{100}) -1 ) \\times 100\\]";
+        temp += "\\[= \\space ((1 + \\frac{" + l + "}{100}) \\times (1 + \\frac{" + b + "}{100}) \\times (1 + \\frac{" + h + "}{100}) -1 ) \\times 100\\]";
+        temp += "\\[= \\space (" + (1 + (l / 100)).toFixed(2) + " \\times " + (1 + (b / 100)).toFixed(2) + " \\times " + (1 + (h / 100)).toFixed(2) + "-1 ) \\times 100 \\]";
+        temp += "\\[= \\space " + percentInc.toFixed(3) + " \\% \\]";
+        output.innerHTML = temp;
+    } else {
+        temp += "\\[Enter \\space all \\space values\\]";
+        output.innerHTML = temp;
+    }
+    renderMathInElement(output);
+}
+
+//Square root calculator
+function squareRoot() {
+    var i = 1;
+    const n = parseInt(document.getElementById("value").value);
+    var result = document.getElementById("solution");
+    var found = false;
+    let steps = "";
+    if (n > 0) {
+        steps += "\\[\\sqrt{n}\\space is\\space the\\space number\\space that\\space gives\\space n\\space when\\space multiplied\\space by\\space itself\\]";
+        steps += "\\[Finding- square\\space roots\\space of\\space numbers\\space that aren't\\space perfect\\space squares\\space :\\]";
+        steps += "\\[1.\\space Estimate\\space -\\space first,\\space get\\space as\\space \\space as\\space you\\space can\\space by\\space finding\\space two\\space perfect\\space square\\space roots\\space your\\space number\\space is\\space between.\\]";
+        steps += "\\[2.\\space Divide\\space -\\space divide\\space your\\space number\\space by\\space one\\space of\\space those\\space square\\space roots.\\]";
+        steps += "\\[3.\\space Average\\space -\\space take\\space the\\space average\\space of\\space the\\space result\\space of\\space step\\space 2\\space and\\space the\\space root.\\]";
+        steps += "\\[4.\\space Use\\space the\\space result\\space of\\space step\\space 3\\space to\\space repeat\\space steps\\space 2\\space and\\space 3\\space until\\space you\\space have\\space a\\space number\\space that\\space is\\space accurate\\space enough\\space for\\space you.\\]";
+        while (!found) {
+            if (i * i == n) {
+                steps += "\\[\\sqrt{" + n + "}\\space =\\space " + i + "\\]";
+                found = true;
+            } else if (i * i > n) {
+                var res = square(n, i - 1, i);
+                steps += "\\[\\sqrt{" + n + "}\\space =\\space " + res.toFixed(2) + "\\]";
+                found = true;
+            }
+            i++;
+        }
+        console.log(n);
+    } else if (n < 0) {
+        steps += "\\[Enter \\space positive \\space values\\]";
+    }
+    else {
+        steps += "\\[Enter \\space all \\space values\\]";
+    }
+    result.innerHTML = steps;
+    renderMathInElement(result);;
+}
+
+function square(num) {
+    return (num * num);
+}

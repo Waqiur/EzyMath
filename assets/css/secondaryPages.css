@@ -217,9 +217,9 @@ td img {
     font-size: 22px;
 }
 
-.content p {
-    font-size: 18px;
-    display: flex;
+.content img {
+    width: 80%;
+    margin: 20px auto y;
 }
 
 .content-block {

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Differentiation Basics</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon image.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
+    <link rel="stylesheet" href="../../assets/css/abstract/media_queries.css"">
+    <link rel=" stylesheet" href="../../assets/css/abstract/animation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- KATEX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+        integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+        integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
+                </div>
+
+                <button class="btn btn-primary" onclick="location.href = '../calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="main-container radiant-container">
+                <h4 class="heading">Differentiation Basics</h4>
+
+                <div class="content">
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Basic Derivate Rules</h4>
+                        <ol>
+                            <li class="point">Constant Rule: \( \frac{d}{dx}(c)=0 \)</li>
+                            <li class="point">Constant Multiple Rule: \( \frac{d}{dx}(cf(x))=cf'(x) \)</li>
+                            <li class="point">Power Rule: \( \frac{d}{dx}(x^n)=nx^{n-1} \)</li>
+                            <li class="point">Sum Rule: \( \frac{d}{dx}[f(x)+g(x)]=f'(x)+g'(x) \)</li>
+                            <li class="point">Difference Rule: \( \frac{d}{dx}[f(x)-g(x)]=f'(x)-g'(x) \)</li>
+                            <li class="point">Product Rule: \( \frac{d}{dx}[f(x)g(x)]=f(x)g'(x)+g(x)f'(x) \)</li>
+                            <li class="point">Quotient Rule: \( \frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{g(x)f'(x)-f(x)g'(x)}{[g(x)]^2} \)</li>
+                            <li class="point">Chain Rule: \( \frac{d}{dx}[f(g(x))]=f'(g(x))g'(x) \)</li>
+                        </ol>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Exponential Functions</h4>
+                        <p>\( \frac{d}{dx}(e^x)=e^x \)</p>
+                        <p>\( \frac{d}{dx}(a^x)=a^xln \space a \)</p>
+                        <p>\( \frac{d}{dx}(e^{g(x)})=e^{g(x)}g'(x) \)</p>
+                        <p>\( \frac{d}{dx}(a^{g(x)})=ln(a)a^{g(x)}g'(x) \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Logarithmic Functions</h4>
+                        <p>\( \frac{d}{dx}(ln \space x)=\frac{1}{x} \)</p>
+                        <p>\( \frac{d}{dx}(ln(g(x)))=\frac{g'(x)}{g(x)} \)</p>
+                        <p>\( \frac{d}{dx}(log_{a}x)=\frac{1}{xlna}, \space x>0 \) </p>
+                        <p>\( \frac{d}{dx}(log_{a}g(x))=\frac{g'(x)}{g(x)lna} \)</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Trigonometric Functions</h4>
+                        <p>\( \frac{d}{dx}(sinx)=cosx \)</p>
+                        <p>\( \frac{d}{dx}(cosx)=-sinx \)</p>
+                        <p>\( \frac{d}{dx}(tanx)=sec^2x \)</p>
+                        <p>\( \frac{d}{dx}(cosecx)=-cosecx \space cotx \)</p>
+                        <p>\( \frac{d}{dx}(secx)=secx \space tanx \) </p>
+                        <p>\( \frac{d}{dx}(cotx)=-cosec^2x \) </p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4 class="secondary-heading">Inverse Trigonometric Functions</h4>
+                        <p>\( \frac{d}{dx}(sin^{-1}x)=\frac{1}{\sqrt{1+x^2}} \)</p>
+                        <p>\( \frac{d}{dx}(cos^{-1}x)=\frac{-1}{\sqrt{1-x^2}} \)</p>
+                        <p>\( \frac{d}{dx}(tan^{-1}x)=\frac{1}{\sqrt{1+x^2}} \)</p>
+                        <p>\( \frac{d}{dx}(cot^{-1}x)=\frac{-1}{\sqrt{1+x^2}} \)</p>
+                        <p>\( \frac{d}{dx}(sec^{-1}x)=\frac{1}{x\sqrt{x^2-1}}, \space x !=±1,0 \)</p>
+                        <p>\( \frac{d}{dx}(cosec^{-1}x)=\frac{-1}{x\sqrt{x^2-1}},\space x !=±1,0 \)</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

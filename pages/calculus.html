@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Linear Algebra</title>
+    <title>Calculus</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/secondaryPages.css">
     <link rel="stylesheet" href="../assets/css/abstract/media_queries.css"">
     <link rel=" stylesheet" href="../assets/css/abstract/animation.css">
 
@@ -23,62 +24,97 @@
 </head>
 
 <body>
-    <main>
-        <section class="course" id="course">
-            <div class="course-grid">
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/Integration.webp" alt="course banner">
-                    </div>
-
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="integrationformula.html">Integration Formula</a>
-                        </h3>
-                    </div>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <nav class="secondary-navbar">
+                <div class="navbar-brand">
+                    <img src="../assets/images/easy math logo.webp" alt="Ezy Maths Logo">
                 </div>
 
+                <button class="btn btn-primary" onclick="location.href = 'calculator.html';">
+                    <p class="btn-text">Calculator</p>
+                    <span class="square"></span>
+                </button>
+            </nav>
+        </header>
 
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/Inverse and Perodicity Function.webp" alt="course banner">
-                    </div>
+        <!--  MAIN CONTENTS -->
+        <main>
+            <div class="tab-wrap radiant-container">
+                <!-- active tab on page load gets checked attribute -->
+                <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+                <label for="tab1">Study</label>
 
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="InverseandPeriodicityoffunctions.html">Inverse and Periodicity of Functions</a>
-                        </h3>
+                <input type="radio" id="tab2" name="tabGroup1" class="tab">
+                <label for="tab2">Practice</label>
+
+                <input type="radio" id="tab3" name="tabGroup1" class="tab">
+                <label for="tab3">Calculator</label>
+
+                <div class="tab__content">
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-banner">
+                                <img src="../assets/images/Integration.webp" alt="course banner">
+                            </div>
+
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="../pages/Calculus/integrationBasics.html">Integration Basics</a>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="course-card">
+                            <div class="course-banner">
+                                <img src="../assets/images/Inverse and Perodicity Function.webp" alt="course banner">
+                            </div>
+
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="../pages/calculus/inverseAndPeriodicityFunction.html">Inverse and
+                                        Periodicity of Functions</a>
+                                </h3>
+                            </div>
+                        </div>
+
+
+                        <div class="course-card">
+                            <div class="course-banner">
+                                <img src="../assets/images/Differentiation Formula.webp" alt="course banner">
+                            </div>
+
+                            <div class="course-content">
+                                <h3 class="card-title">
+                                    <a href="../pages/Calculus/differentiationBasics.html">Differentiation Basics</a>
+                                </h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="tab__content">
+                    <h3>Medium Section</h3>
+                    <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget,
+                        lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo,
+                        fringilla
+                        vel, aliquet nec, vulputate eget, arcu.</p>
 
-
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/Differentiation Formula.webp" alt="course banner">
-                    </div>
-
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="Differentiationformula.html">Differentiation Formulae</a>
-                        </h3>
-                    </div>
+                    <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit.
+                        Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus
+                        blandit viverra.</p>
                 </div>
 
-
-                <div class="course-card">
-                    <div class="course-banner">
-                        <img src="../assets/images/Laplace.webp" alt="course banner">
-                    </div>
-
-                    <div class="course-content">
-                        <h3 class="card-title">
-                            <a href="laplace.html">Laplace</a>
-                        </h3>
-                    </div>
+                <div class="tab__content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, facilis, nulla iusto sed sapiente
+                    voluptates quisquam dicta distinctio accusamus assumenda voluptas dolores ex labore mollitia rerum
+                    suscipit repudiandae expedita deleniti!
                 </div>
+
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
 </body>
 
 </html>
