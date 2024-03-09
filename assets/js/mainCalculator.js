@@ -614,9 +614,67 @@ function squareRoot() {
         steps += "\\[Enter \\space all \\space values\\]";
     }
     result.innerHTML = steps;
-    renderMathInElement(result);;
+    renderMathInElement(result);
 }
 
 function square(num) {
     return (num * num);
+}
+
+//Complex Operations
+function complexOperation() {
+    var real1 = parseFloat(document.getElementById("real1").value);
+    var imaginary1 = parseFloat(document.getElementById("imaginary1").value);
+    var real2 = parseFloat(document.getElementById("real2").value);
+    var imaginary2 = parseFloat(document.getElementById("imaginary2").value);
+    var operation = document.getElementById("operation").value;
+    var output = document.getElementById("solution");
+    var resultReal, resultImaginary;
+    switch (operation) {
+        case "Addition":
+            resultReal = real1 + real2;
+            resultImaginary = imaginary1 + imaginary2;
+            break;
+        case "Subtraction":
+            resultReal = real1 - real2;
+            resultImaginary = imaginary1 - imaginary2;
+            break;
+        case "Multiplication":
+            resultReal = real1 * real2 - imaginary1 * imaginary2;
+            resultImaginary = real1 * imaginary2 + real2 * imaginary1;
+            break;
+        case "Division":
+            var denominator = real2 * real2 + imaginary2 * imaginary2;
+            resultReal = (real1 * real2 + imaginary1 * imaginary2) / denominator;
+            resultImaginary = (real2 * imaginary1 - real1 * imaginary2) / denominator;
+            break;
+        default:
+            alert("Invalid operation selected!");
+            return;
+    }
+
+    output.innerHTML = "Result: " + resultReal + " + " + resultImaginary + "i";
+    renderMathInElement(output);
+}
+
+
+//Currency Converter
+function curcon() {
+    fetch("https://api.exchangerate-api.com/v4/latest/USD")
+        .then((cur) => {
+            return cur.json();
+        })
+        .then(
+            (curout = function (c) {
+                const f = c.rates[document.getElementById("curcon-1").value];
+                const t = c.rates[document.getElementById("curcon-2").value];
+                const i = parseInt(document.getElementById("amount").value);
+                if (i < 0) {
+                    document.getElementById("solution").innerHTML = "Enter <strong>only</strong> positive amount values";
+                }
+                else {
+                    document.getElementById("solution").innerHTML = `${(i * t) / f}`;
+                }
+            })
+        );
 }

@@ -49,6 +49,11 @@
     width: 100%;
 }
 
+.wide {
+    width: 70% !important;
+}
+
+/* TABLE */
 .table-grid {
     padding: 0 40px;
     display: grid;

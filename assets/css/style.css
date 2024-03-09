@@ -59,6 +59,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+select {
+  padding: 10px;
+  border-radius: 30px;
+}
+
 /* KATEX CSS */
 .katex-display {
   margin: 0px !important;
