@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon image.ico">
+
+    <!--- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/abstract/media_queries.css">
+    <link rel="stylesheet" href="../assets/css/abstract/animation.css">
+
+    <!--- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <!-- ICON PACK -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body>
+    <main class="main-login-container radiant-container">
+        <div class="login-container">
+            <p class="login-heading">Sign Up</p>
+            <div class="label-div">
+                <p class="login-label">Username</p>
+                <div class="textbox-div">
+                    <ion-icon class="icon" name="person-outline"></ion-icon>
+                    <input class="input-box" placeholder="Type your username" type="text" required />
+                </div>
+            </div>
+            <div class="label-div">
+                <p class="login-label">Password</p>
+                <div class="textbox-div">
+                    <ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+                    <input class="input-box" placeholder="Type your password" type="password" required />
+                </div>
+            </div>
+            <p class="forgot-password">Forgot Password?</p>
+            <button class="btn btn-primary login-btn" onclick="location.href = '#about';">
+                <p class="btn-text">Sign Up</p>
+                <span class="square"></span>
+            </button>
+
+            <p class="center">Already have an Account? </p>
+
+            <button class="btn btn-primary login-btn" onclick="location.href = '#about';">
+                <p class="btn-text">Log In</p>
+                <span class="square"></span>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>
