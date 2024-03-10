@@ -50,7 +50,11 @@
 }
 
 .wide {
-    width: 70% !important;
+    width: 35% !important;
+}
+
+.small {
+    width: 20% !important;
 }
 
 /* TABLE */
@@ -308,7 +312,28 @@ td img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
+}
+
+.calc-grid-3-col {
+    width: 100%;
+    margin-left: 80px;
+    display: grid !important;
+    grid-template-columns: 1fr 2fr;
+    justify-content: left;
+    align-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.calc-grid-3-col p {
+    justify-self: right;
+}
+
+.calc-grid-3-col .input-container {
+    display: flex;
+    justify-content: left;
 }
 
 .math-letter {

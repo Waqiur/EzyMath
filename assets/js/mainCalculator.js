@@ -678,3 +678,48 @@ function curcon() {
             })
         );
 }
+
+//Cramer's Rule 
+function cramersRule() {
+    var a = parseInt(document.getElementById('a1').value);
+    var b = parseInt(document.getElementById('b1').value);
+    var c = parseInt(document.getElementById('c1').value);
+    var d = parseInt(document.getElementById('a2').value);
+    var e = parseInt(document.getElementById('b2').value);
+    var f = parseInt(document.getElementById('c2').value);
+
+    var cramtemp = "";
+    var cramoutput = document.getElementById("solution");
+    if (!isNaN(a) && !isNaN(b) && !isNaN(c) && !isNaN(d) && !isNaN(e) && !isNaN(f)) {
+        var res = (a * e) - (b * d);
+        var res1 = (c * e) - (b * f);
+        var res2 = (a * f) - (c * d);
+        var x = (res1 / res);
+        var y = (res2 / res);
+        cramtemp += "\\[First, \\space we \\space need \\space to \\space calculate \\space Δ ,\\space  Δ_x \\space and \\space Δ_y\\]"
+        cramtemp += "\\[Δ \\space = \\space ((a \\times  e) - (b \\times d))\\]"
+        cramtemp += "\\[\\space = \\space ((" + a + " \\times  " + e + ") - (" + b + " \\times " + d + "))\\]"
+        cramtemp += "\\[\\space = \\space ((" + (a * e) + ") - (" + (b * d) + "))\\]"
+        cramtemp += "\\[\\space = \\space " + res + "\\]"
+        cramtemp += "\\[Δ_x \\space = \\space ((c \\times  e) - (b \\times f))\\]"
+        cramtemp += "\\[\\space = \\space ((" + c + " \\times  " + e + ") - (" + b + " \\times " + f + "))\\]"
+        cramtemp += "\\[\\space = \\space ((" + (c * e) + ") - (" + (b * f) + "))\\]"
+        cramtemp += "\\[\\space = \\space " + res1 + "\\]"
+        cramtemp += "\\[Δ_y \\space = \\space ((a \\times  f) - (c \\times d))\\]"
+        cramtemp += "\\[\\space = \\space ((" + a + " \\times  " + f + ") - (" + c + " \\times " + d + "))\\]"
+        cramtemp += "\\[\\space = \\space ((" + (a * f) + ") - (" + (c * d) + "))\\]"
+        cramtemp += "\\[\\space = \\space " + res2 + "\\]"
+        cramtemp += "\\[Finally, \\space we \\space will \\space calculate \\space X \\space and \\space Y\\]"
+        cramtemp += "\\[\\space X \\space = \\space \\frac{Δ_x}{Δ}\\]"
+        cramtemp += "\\[\\space = \\space \\frac{" + res1 + "}{" + res + "} \\space = \\space " + x + "\\]";
+        cramtemp += "\\[\\space Y \\space = \\space \\frac{Δ_y}{Δ}\\]"
+        cramtemp += "\\[\\space = \\space \\frac{" + res2 + "}{" + res + "} \\space = " + y + "\\]";
+        cramtemp += "\\[The \\space solution \\space is \\space (X,Y) =  (" + x + "," + y + ") \\]";
+        cramoutput.innerHTML = cramtemp;
+        renderMathInElement(cramoutput);
+    }
+    else {
+        cramoutput.innerHTML = "\\[Please \\space enter \\space all \\space the \\space values\\]";
+        renderMathInElement(cramoutput);
+    }
+}

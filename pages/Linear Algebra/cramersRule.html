@@ -50,31 +50,30 @@
                 <form class="form" action="" id="form" autocomplete="off">
                     <div class="calc-container">
                         <div class="calc-grid-3-col">
-                            <p>First Number:</p>
+                            <p>First System of Equation:</p>
                             <div class="input-container">
-                                <input class="form-input wide" id="real1" type="number" placeholder="Real Part">
-                                <input class="form-input wide" id="imaginary1" type="number" placeholder="Imaginary Part">
+                                <input class="form-input small" id="a1" type="number" placeholder="a1">
+                                <label class="math-letter" for="#solvey">X +</label>
+                                <input class="form-input small" id="b1" type="number" placeholder="b1">
+                                <label class="math-letter" for="#solvey">y +</label>
+                                <input class="form-input small" id="c1" type="number" placeholder="c1">
+                                <label class="math-letter" for="#solvey">= 0</label>
                             </div>
                         </div>
                         <div class="calc-grid-3-col">
-                            <p>Second Number:</p>
+                            <p>Second System of Equation:</p>
                             <div class="input-container">
-                                <input class="form-input wide" id="real2" type="number" placeholder="Real Part">
-                                <input class="form-input wide" id="imaginary2" type="number" placeholder="Imaginary Part">
+                                <input class="form-input small" id="a2" type="number" placeholder="a2">
+                                <label class="math-letter" for="#solvey">X +</label>
+                                <input class="form-input small" id="b2" type="number" placeholder="b2">
+                                <label class="math-letter" for="#solvey">y +</label>
+                                <input class="form-input small" id="c2" type="number" placeholder="c2">
+                                <label class="math-letter" for="#solvey">= 0</label>
                             </div>
-                        </div>
-                        <div class="calc-grid-3-col">
-                            <p>Operation:</p>
-                            <select class="wide" id="operation">
-                                <option>Addition</option>
-                                <option>Subtraction</option>
-                                <option>Multiplication</option>
-                                <option>Division</option>
-                            </select>
                         </div>
                         <div class="button-container">
                             <button type="button" class="calc-btn calc-btn-light"
-                                onclick="complexOperation()">Solve</button>
+                                onclick="cramersRule()">Solve</button>
                             <button type="button" class="calc-btn calc-btn-dark"
                                 onclick="resetCalculator()">Reset</button>
                         </div>
